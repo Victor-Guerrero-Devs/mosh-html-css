@@ -13,43 +13,55 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .image-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "one three three"
+      "two three three"
+      "four five six"
+      "seven eight nine";
+    width: 70%;
+  }
+  .one {
+    grid-area: one;
+  }
+
+  .two {
+    grid-area: two;
+  }
+
+  .three {
+    grid-area: three;
+  }
+
+  .four {
+    grid-area: four;
+  }
+
+  .five {
+    grid-area: five;
+  }
+
+  .six {
+    grid-area: six;
+  }
+
+  .seven {
+    grid-area: seven;
+  }
+
+  .eight {
+    grid-area: eight;
+  }
+
+  .nine {
+    grid-area: nine;
+  }
+}
+
 img {
   width: 100%;
   object-fit: cover;
 }
-
-/* .one {
-  grid-area: one;
-}
-
-.two {
-  grid-area: two;
-}
-
-.three {
-  grid-area: three;
-}
-
-.four {
-  grid-area: four;
-}
-
-.five {
-  grid-area: five;
-}
-
-.six {
-  grid-area: six;
-}
-
-.seven {
-  grid-area: seven;
-}
-
-.eight {
-  grid-area: eight;
-}
-
-.nine {
-  grid-area: nine;
-} */
