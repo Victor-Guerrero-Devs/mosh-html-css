@@ -1,0 +1,34 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  background-color: beige;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 70ch;
+}
+
+section {
+  margin: 30px;
+  border: 5px solid black;
+  padding: 20px;
+  background-color: bisque;
+  width: 65vw;
+}
+
+footer {
+  text-align: center;
+  font-size: 18px;
+}
+
+.cow {
+  width: 100%;
+}
+
+li {
+  margin: 10px;
+}

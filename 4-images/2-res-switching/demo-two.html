@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolution Switching</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1>Demo Two Advanced</h1></header>
+
+    <main>
+      <figure>
+        <img
+          src="./images/cow.jpg"
+          alt="a hairy cow in the field"
+          srcset="
+            ./images/cow.jpg     400w,
+            ./images/cow@2x.jpg  800w,
+            ./images/cow@3x.jpg 1200w
+          "
+          sizes="
+           (max-width: 500px) 100vw, 
+           (max-width: 700px) 50vw,
+           33vw 
+          "
+        />
+      </figure>
+
+      <p>
+        This one gets rid of the CSS class selector and relies on the sizes
+        attribute in the image element to determine its size. Hence for desktop
+        it is 33%, for tablet 50% and for mobile 100%.
+      </p>
+    </main>
+
+    <footer>
+      <a href="./index.html">Home</a>
+      <br />
+      <a href="./demo.html">Demo One Basic</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolution Switching</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1>Resolution Switching</h1></header>
+
+    <main>
+      <section>
+        <h2>Problem</h2>
+        <p>
+          IN the last lesson, we learned how we can support high density screens
+          by using images with higher pixel counts, so the image won't look
+          elongated and pixelated on screens with high DPR.
+        </p>
+
+        <p>
+          There is another problem, on top of providing high res images for
+          screens with high DPR, we also have to provide different image sizes
+          for different devices, i.e. a 300x300 image for mobile, 600x600 for
+          tablets, 1200x1200 for desktops.
+        </p>
+
+        <p>
+          In the last lesson, no matter the resolution of the image, it was
+          limited to 400 pixels in width. This time, we want to change the
+          actual width so the image becomes physically smaller or larger
+          depending on the device.
+        </p>
+
+        <p>
+          Since there way too many devices and differences between them, we
+          should only provide three kinds of images for resolution switching:
+          small for mobile, medium for tablet, and large for desktop.
+        </p>
+      </section>
+
+      <section>
+        <h2>How To Implement</h2>
+        <p>
+          Like in the last section, we use the srcset attribute in the image
+          element but with a slight modification.
+        </p>
+        <br />
+        <figure>
+          <img src="./images/srcsetex.png" alt="" />
+        </figure>
+
+        <p>
+          Instead of using 1x, 2x, 3x, we give the actual number for its width
+          in pixels, hence 400w, 800w, 1200w. Be careful though since you may
+          use "px" instead of "w".
+        </p>
+
+        <p>
+          The browser will know which image to use in relation to the device's
+          viewport. Therefore, if the user is visiting your site on a mobile
+          device, the browser will know to pick the image that has
+          <strong>400w</strong>
+        </p>
+
+        <p>
+          Notice how the image has the class cow? Well, instead of limiting the
+          width of the image to 400px, we make sure it fills its container by
+          using <strong>.cow { width: 100%; } </strong> in this way, the image
+          becomes responsive.
+        </p>
+        <p>This is the most basic way to use resolution switching.</p>
+      </section>
+
+      <section>
+        <h2>Advanced Usage of Resolution Switching</h2>
+        <p>
+          So far, we have implemented basic resolution switching. IN other
+          words, our image takes up 100% of its container's width no matter if
+          it is on mobile or tablet or desktop, while changing physical size 
+          in relation to device.
+        </p>
+
+        <p>
+          Advanced resolution switching, controls how much of the viewport width
+          it takes up, e.g. 100% for mobile, 50% for tablet, 33% for desktop.
+        </p>
+
+        <p>
+          IN order to do this, we get rid
+          <strong>.cow { width: 100%; } </strong> and use the attribute called
+          sizes as so:
+        </p>
+
+        <figure>
+          <img src="./images/ex2.png" alt="" />
+        </figure>
+
+        <p>
+          To reword what sizes is doing: if the viewport width is maximum 500px
+          (i.e. mobile), have the image take up 100% of the vw.
+        </p>
+        <p>
+          Else, if the viewport width is maximum 700px (i.e. tablet), have the
+          image take up 50% of the vw.
+        </p>
+
+        <p>Otherwise, have the image take up 33% of the vw.</p>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        <p>
+          The numbers used in both the srcset and sizes attributes are completly
+          arbitrary. You can play around with them and use more or less than 3
+          different sizes.
+        </p>
+
+        <p>
+          You should check out
+          <a href="https://www.responsivebreakpoints.com/"
+            >Responsive Breakpoints</a
+          >
+          to have this website do all of the math for you.
+        </p>
+
+        <p>
+            A couple of tips for using this website: 
+            <ul>
+                <li>Resolution 200 - 1400 covers the majority of devices </li>
+                <li>Size step determines the difference in file size per image (50kb is ideal)</li>
+                <li>Reduce maximum images to 3 or 5. 20 is way too much. </li>
+            </ul>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+    <a href="./demo.html">Demo One Basic</a>
+    <br>
+    <a href="./demo-two.html">Demo Two Advanced</a>
+    </footer>
+  </body>
+</html>

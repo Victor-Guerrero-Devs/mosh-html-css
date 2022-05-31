@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolution Switching</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1>Demo One Basic</h1></header>
+
+    <main>
+      <figure>
+        <img
+          src="./images/cow.jpg"
+          alt="a hairy cow in the field"
+          class="cow"
+          srcset="
+            ./images/cow.jpg     400w,
+            ./images/cow@2x.jpg  800w,
+            ./images/cow@3x.jpg 1200w
+          "
+        />
+      </figure>
+
+      <p>
+        This one uses the css class selector cow to make its width 100%, thereby
+        taking up the entire container while changing image size.
+      </p>
+    </main>
+
+    <footer>
+      <a href="./index.html">Home</a>
+      <br />
+      <a href="./demo-two.html">Demo Two Advanced</a>
+    </footer>
+  </body>
+</html>
