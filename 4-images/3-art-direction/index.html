@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Direction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1>Art Direction</h1></header>
+
+    <main>
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          Sometimes, you want to use a cropped or zoomed in version of an image
+          if the user is on a mobile or tablet device. However, if the user is
+          on a desktop, you give the full sized image instead.
+        </p>
+        <p>
+          To check out a live example of this, go to this resturant's website
+          <a href="https://earls.ca/">here</a>.
+        </p>
+        <figure>
+          <img src="./images/deskex.png" alt="" width="80%" />
+          <figcaption>Desktop Version</figcaption>
+        </figure>
+        <br />
+        <figure>
+          <img src="./images/mobilex.png" alt="" width="60%" />
+          <figcaption>Mobile/Tablet Version</figcaption>
+        </figure>
+        <br />
+        <p>
+          Notice how in the desktop version, each image has its own column and
+          they are all the same size. On the mobile/tablet version, however, the
+          first image is made twice as large as the other two, zoomed in, and
+          given its own row. The other two images share the same row but given
+          their own columns.
+        </p>
+
+        <p>This is art direction.</p>
+      </section>
+
+      <section>
+        <h2>When To Use Art Direction</h2>
+        <p>
+          There are two main reasons to use this:
+          <ol>
+              <li>For photo galleries</li>
+              <li>For background images</li>
+          </ol>
+        </p>
+
+        <p>
+            To expand on the first one, as you saw in the restaurant's webpage, you may want to 
+            have your mobile users to get more appetizing, zoomed in photos of your food. 
+            In general, you want to give mobile and tablet users a more zoomed in and cropped 
+            image for best practice. 
+        </p>
+
+        <p>
+            For the second reason, just like the first, you should use a zoomed in background image 
+            for mobile and tablet users because it looks better. 
+        </p>
+      </section>
+
+      <section>
+          <h2>How To Use Art Direction</h2>
+          <p>
+              For this example, download a full sized image and then scale it to 400px and save it 
+              as img.jpg 
+          </p>
+
+          <p>
+            Then take that image and either crop it or zoom in on it and save it as img-cropped.jpg or 
+            img-zoomed.jpg
+          </p>
+
+          <p>
+              Finally use the picture element and nest source elements in it with these attributes and 
+              values.
+          </p>
+
+          <figure>
+              <img src="./images/picex.png" alt="">
+          </figure>
+
+          <p>
+              The first source element is saying: if the device's width is less than 500, use this 
+              zoomed in image 
+          </p>
+          <p>
+              The second source element is saying: else, if the device's width is larger than 
+              501px, use this 2x image 
+          </p>
+
+          <p>
+              Finally, the last img element without a source is the default. 
+          </p>
+          <p>
+              Having classes is not necessary but I had to add them so the image wouldn't overflow 
+              out of its container, <strong>.fox { width: 50%; } </strong>
+          </p>
+      </section>
+
+      <section>
+          <h2>Conclusion</h2>
+          <p>
+              Once again, no need to go overboard with implementing this. Just stick to using it for 
+              important images on the home/landing page. 
+          </p>
+          <p>
+              Also the width in the examples (500, 501) are arbitrary. Use whichever values 
+              suit your design. 
+          </p>
+          <p>
+              To practice, make a mock menu with photos that change in relation to viewing it on 
+              desktops, tablets or mobiles. Since we only used two source elements, one for mobile and 
+              another one for both tablet/desktop, use a source for each one (therefore 3)
+          </p>
+      </section>
+    </main>
+
+    <footer><a href="./demo.html">Demo</a></footer>
+  </body>
+</html>
