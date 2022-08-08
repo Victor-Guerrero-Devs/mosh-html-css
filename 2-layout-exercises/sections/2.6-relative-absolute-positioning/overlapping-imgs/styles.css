@@ -37,3 +37,11 @@ p {
     font-size: 75.5%;
   }
 }
+
+/* CONTAINER */
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: 15rem auto;
+}
