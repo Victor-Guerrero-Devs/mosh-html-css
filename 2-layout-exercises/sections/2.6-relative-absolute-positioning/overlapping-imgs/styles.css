@@ -40,7 +40,7 @@ p {
   }
 }
 
-/* CONTAINER */
+/* CONTAINERS */
 
 .container {
   display: flex;
@@ -51,3 +51,9 @@ p {
 .text-container {
   padding: 7rem;
 }
+
+.img-container {
+  position: relative;
+}
+
+/* IMGS */
