@@ -50,6 +50,12 @@ main {
   margin: 1rem auto;
 }
 
+@media screen and (max-width: 650px) {
+  main {
+    width: 380px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   h1 {
     font-size: 40px;
@@ -66,6 +72,6 @@ main {
   }
 
   main {
-    width: 380px;
+    width: 330px;
   }
 }
