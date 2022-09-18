@@ -9,3 +9,24 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
+
+h1 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.forest {
+  width: 400px;
+}
+
+@media screen and (max-width: 450px) {
+  .forest {
+    width: 300px;
+  }
+}
