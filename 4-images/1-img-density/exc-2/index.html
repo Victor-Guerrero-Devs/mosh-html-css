@@ -21,5 +21,34 @@
         "
       />
     </figure>
+    <main>
+      <p>
+        Certain displays like the ones on iPhones and iMacs and highend androids
+        have a very high pixel density. In order to not have blurry pictures on
+        these, we have to provide the same image in different resolutions.
+      </p>
+      <p>
+        For the most, this is only done for very important images like the hero
+        image and we provide 3 different versions: one for regular screens
+        (400x400, aka @1x), one for 2 DPR (800x800, aka @2x) and one for 3 DPR
+        (1200x1200, aka @3x) which applies to the latest generation of iphones.
+      </p>
+      <p>
+        Once we get these three different resolutions, we should compress via an
+        online tool. After this is done, we use the
+        <code>srcset</code> attribute in the <code>img</code> element to set the
+        3 different kinds of photos we want to use at X resolution.
+      </p>
+      <p>
+        The original <code>src</code> attribute should have the @1x resolution
+        picture. It must also have a CSS class that is limited to
+        <code>400px</code>.
+      </p>
+      <p>
+        The other two high res versions will also be limited to 400px but you
+        may change (realistically, you would lower it to accomadate the smaller
+        viewport)
+      </p>
+    </main>
   </body>
 </html>
